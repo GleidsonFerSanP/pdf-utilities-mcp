@@ -4,6 +4,7 @@ src/**
 .gitignore
 tsconfig.json
 node_modules/**
+!mcp-server/node_modules/**
 *.vsix
 .env
 .DS_Store

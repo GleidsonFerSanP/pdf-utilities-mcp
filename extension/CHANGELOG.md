@@ -5,6 +5,14 @@ All notable changes to the PDF Utilities extension will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-02-22
+
+### Fixed
+
+* Include MCP server dependencies in extension package
+* Fixed "Cannot find package '@modelcontextprotocol/sdk'" error
+* MCP server now loads correctly with all required dependencies
+
 ## [1.0.0] - 2026-02-22
 
 ### Added
