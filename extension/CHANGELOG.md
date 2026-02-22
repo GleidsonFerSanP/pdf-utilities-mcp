@@ -5,6 +5,21 @@ All notable changes to the PDF Utilities extension will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-02-22
+
+### Added
+
+* **@pdf Chat Participant** - Attach PDFs directly in Copilot Chat and interact with them
+* Users can now type `@pdf` in chat, attach a PDF, and ask questions about its content
+* Supports multiple PDF attachments in a single conversation
+* Conversation history maintained across turns for follow-up questions
+* Automatic text extraction from attached PDFs using pdf-parse
+* Graceful degradation when Chat API is not available
+
+### Fixed
+
+* PDF files no longer show yellow "model cannot read" warning when using @pdf participant
+
 ## [1.0.1] - 2026-02-22
 
 ### Fixed

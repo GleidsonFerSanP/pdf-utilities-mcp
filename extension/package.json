@@ -2,7 +2,7 @@
     "name": "pdf-utilities",
     "displayName": "PDF Utilities for GitHub Copilot",
     "description": "AI-powered PDF manipulation tools - Read, create, merge, split, and edit PDFs directly from GitHub Copilot Chat",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "publisher": "GleidsonFerSanP",
     "icon": "icon.png",
     "engines": {
@@ -30,6 +30,15 @@
     ],
     "main": "./dist/extension.js",
     "contributes": {
+        "chatParticipants": [
+            {
+                "id": "pdf-utilities.pdf",
+                "fullName": "PDF Reader",
+                "name": "pdf",
+                "description": "Read, analyze and interact with PDF files in chat. Attach a PDF and ask questions about it.",
+                "isSticky": false
+            }
+        ],
         "mcpServerDefinitionProviders": [
             {
                 "id": "pdf-utilities",
