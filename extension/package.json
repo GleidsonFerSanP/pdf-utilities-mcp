@@ -1,0 +1,115 @@
+{
+    "name": "pdf-utilities",
+    "displayName": "PDF Utilities for GitHub Copilot",
+    "description": "AI-powered PDF manipulation tools - Read, create, merge, split, and edit PDFs directly from GitHub Copilot Chat",
+    "version": "1.0.0",
+    "publisher": "GleidsonFerSanP",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "AI",
+        "Other",
+        "Data Science"
+    ],
+    "keywords": [
+        "pdf",
+        "mcp",
+        "model context protocol",
+        "ai assistant",
+        "copilot",
+        "pdf reader",
+        "pdf writer",
+        "pdf merge",
+        "pdf split",
+        "document processing"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "mcpServerDefinitionProviders": [
+            {
+                "id": "pdf-utilities",
+                "label": "PDF Utilities"
+            }
+        ],
+        "chatInstructions": [
+            {
+                "name": "PDFUtilitiesGuidelines",
+                "description": "Tools for PDF manipulation - read, create, merge, split, and edit PDFs",
+                "path": "resources/instructions/pdf-utilities.instructions.md"
+            }
+        ],
+        "commands": [
+            {
+                "command": "pdfUtilities.configure",
+                "title": "Configure PDF Utilities MCP",
+                "category": "PDF Utilities"
+            },
+            {
+                "command": "pdfUtilities.restart",
+                "title": "Restart PDF Utilities Server",
+                "category": "PDF Utilities"
+            },
+            {
+                "command": "pdfUtilities.viewDocs",
+                "title": "Open PDF Utilities Documentation",
+                "category": "PDF Utilities"
+            }
+        ],
+        "configuration": {
+            "title": "PDF Utilities",
+            "properties": {
+                "pdfUtilities.autoStart": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically start MCP server on VS Code startup"
+                },
+                "pdfUtilities.logLevel": {
+                    "type": "string",
+                    "enum": [
+                        "error",
+                        "warn",
+                        "info",
+                        "debug"
+                    ],
+                    "default": "info",
+                    "description": "Log level for PDF Utilities server"
+                },
+                "pdfUtilities.maxPdfSize": {
+                    "type": "number",
+                    "default": 50,
+                    "description": "Maximum PDF file size in MB for processing"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile && npm run copy-server",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "copy-server": "cd .. && npm run build && npm run copy-to-extension",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/vscode": "^1.85.0",
+        "@vscode/vsce": "^2.22.0",
+        "typescript": "^5.3.0"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GleidsonFerSanP/pdf-utilities-mcp.git"
+    },
+    "bugs": {
+        "url": "https://github.com/GleidsonFerSanP/pdf-utilities-mcp/issues"
+    },
+    "license": "MIT"
+}

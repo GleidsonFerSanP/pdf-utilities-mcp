@@ -1,0 +1,36 @@
+{
+    "name": "pdf-utilities-mcp",
+    "version": "1.0.0",
+    "description": "MCP Server for PDF manipulation - Provides PDF tools for AI assistants via Model Context Protocol",
+    "type": "module",
+    "main": "dist/index.js",
+    "bin": {
+        "pdf-utilities-mcp": "./dist/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "start": "node dist/index.js",
+        "copy-to-extension": "mkdir -p extension/mcp-server && cp -r dist/* extension/mcp-server/"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "pdf",
+        "pdf-tools",
+        "ai-assistant",
+        "github-copilot"
+    ],
+    "author": "GleidsonFerSanP",
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.0.0",
+        "pdf-lib": "^1.17.1",
+        "pdf-parse": "^1.1.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/pdf-parse": "^1.1.4",
+        "typescript": "^5.3.0"
+    }
+}

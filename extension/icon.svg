@@ -1,0 +1,45 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="60" fill="#E74C3C" opacity="0.9"/>
+  
+  <!-- PDF Document Shape -->
+  <g transform="translate(34, 24)">
+    <!-- Main document background -->
+    <rect x="0" y="0" width="60" height="80" fill="#FFFFFF" rx="4"/>
+    
+    <!-- Folded corner -->
+    <path d="M 50 0 L 60 10 L 50 10 Z" fill="#E0E0E0"/>
+    
+    <!-- PDF Text -->
+    <text x="30" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#E74C3C" text-anchor="middle">PDF</text>
+    
+    <!-- Tool Icons -->
+    <!-- Wrench icon -->
+    <g transform="translate(12, 40)">
+      <path d="M 4 8 L 8 4 L 10 6 L 6 10 Z" fill="#3498DB" stroke="#2980B9" stroke-width="1"/>
+      <circle cx="9" cy="5" r="2" fill="none" stroke="#2980B9" stroke-width="1"/>
+    </g>
+    
+    <!-- Gear icon -->
+    <g transform="translate(32, 40)">
+      <circle cx="6" cy="6" r="4" fill="none" stroke="#3498DB" stroke-width="1"/>
+      <circle cx="6" cy="6" r="2" fill="#3498DB"/>
+      <line x1="6" y1="1" x2="6" y2="3" stroke="#2980B9" stroke-width="1"/>
+      <line x1="6" y1="9" x2="6" y2="11" stroke="#2980B9" stroke-width="1"/>
+      <line x1="1" y1="6" x2="3" y2="6" stroke="#2980B9" stroke-width="1"/>
+      <line x1="9" y1="6" x2="11" y2="6" stroke="#2980B9" stroke-width="1"/>
+    </g>
+    
+    <!-- Document lines -->
+    <line x1="10" y1="60" x2="50" y2="60" stroke="#BDC3C7" stroke-width="2"/>
+    <line x1="10" y1="68" x2="45" y2="68" stroke="#BDC3C7" stroke-width="2"/>
+    <line x1="10" y1="76" x2="50" y2="76" stroke="#BDC3C7" stroke-width="2"/>
+  </g>
+  
+  <!-- AI Sparkle Effect -->
+  <g opacity="0.8">
+    <circle cx="96" cy="32" r="3" fill="#F39C12"/>
+    <circle cx="102" cy="28" r="2" fill="#F39C12"/>
+    <circle cx="92" cy="28" r="2" fill="#F39C12"/>
+  </g>
+</svg>
